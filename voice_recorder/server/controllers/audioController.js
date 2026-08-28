@@ -39,7 +39,7 @@ exports.uploadAudio = async (req, res) => {
       size: `${(req.file.size / (1024 * 1024)).toFixed(2)} MB`,
       uploadDate: new Date().toISOString(),
       metadata: metadata,
-      url: fileUrl
+      url: `/uploads/${req.file.filename}`
     };
 
     //const db = loadMetadata();
